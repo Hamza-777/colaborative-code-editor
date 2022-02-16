@@ -1,0 +1,83 @@
+.app {
+  background-color: #1E1E1E;
+  height: 100vh;
+}
+
+.header {
+  height: 6vh;
+  padding: 0 2rem;
+  background-color: #1E1E1E;
+  color: white;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.header__tools {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header__tools button {
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+  padding: 1rem;
+  height: 40px;
+  font-size: 1rem;
+  background-color: rgb(227, 29, 59);
+  color: white;
+  border: none;
+  border-radius: 100px;
+}
+
+.header__tools button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.logo {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  height: 70px;
+}
+
+.logo img {
+  height: 100%;
+  filter: drop-shadow(1.2);
+}
+
+main {
+  height: 94vh;
+}
+
+.editor__container {
+  /* margin-top: 1rem; */
+  width: 60vw;
+}
+
+.editor {
+  /* border-bottom: 1px solid whitesmoke; */
+}
+
+.output-container {
+  background-color: rgb(23, 23, 23);
+  height: 32.5vh;
+  margin-top: -15px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.output-container p {
+  padding-left: 10px;
+}
+
+.output-container h3 {
+  background-color: #393939;
+  color: white;
+  padding: 0.5rem 0 0.5rem 1rem;
+  /* border-bottom: 1px solid lightgray; */
+}
