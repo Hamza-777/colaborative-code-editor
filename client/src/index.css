@@ -1,13 +1,334 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Utilities */
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Comforter&family=Cookie&family=Creepster&family=Festive&family=Oswald:wght@300&family=Permanent+Marker&family=Poiret+One&family=Quintessential&family=Raleway:wght@300&family=Redressed&family=Shizuru&family=Syne+Tactile&family=Tangerine&family=Ubuntu:wght@300&display=swap');
+
+:root {
+    --font-architects-daughter: 'Architects Daughter', cursive;
+    --font-comforter: 'Comforter', cursive;
+    --font-cookie: 'Cookie', cursive;
+    --font-creepster: 'Creepster', cursive;
+    --font-festive: 'Festive', cursive;
+    --font-oswald: 'Oswald', sans-serif;
+    --font-permanent-marker: 'Permanent Marker', cursive;
+    --font-poiret-one: 'Poiret One', cursive;
+    --font-quintessential: 'Quintessential', cursive;
+    --font-raleway: 'Raleway', sans-serif;
+    --font-redressed: 'Redressed', cursive;
+    --font-shizuru: 'Shizuru', cursive;
+    --font-syne-tactile: 'Syne Tactile', cursive;
+    --font-tangerine: 'Tangerine', cursive;
+    --font-ubuntu: 'Ubuntu', sans-serif;
+    --primary-color: #00E0FF;
+    --secondary-color: #393E46;
+    --dark-color: #040303;
+    --light-color: #EEEEEE;
+    --badge-color: #FF5722;
+    --starred-color: #FFC900;
+    --green-color: #0a6d0a;
+    --red-color: #ff0000;
+    --black-color: #000;
+    --grey-1-color: #111;
+    --grey-2-color: #222;
+    --grey-3-color: #333;
+    --grey-4-color: #444;
+    --grey-5-color: #555;
+    --grey-6-color: #666;
+    --grey-7-color: #777;
+    --grey-8-color: #888;
+    --grey-9-color: #999;
+    --grey-a-color: #aaa;
+    --grey-b-color: #bbb;
+    --grey-c-color: #ccc;
+    --grey-d-color: #ddd;
+    --grey-e-color: #eee;
+    --white-color: #fff;
+    --light-black-1: rgba(0, 0, 0, 0.1);
+    --light-black-2: rgba(0, 0, 0, 0.15);
+    --light-black-3: rgba(0, 0, 0, 0.2);
+    --light-black-4: rgba(0, 0, 0, 0.25);
+    --light-black-5: rgba(0, 0, 0, 0.3);
+    --light-black-6: rgba(0, 0, 0, 0.35);
+    --light-black-7: rgba(0, 0, 0, 0.4);
+    --light-black-8: rgba(0, 0, 0, 0.45);
+    --light-black-9: rgba(0, 0, 0, 0.5);
+    --light-black-10: rgba(0, 0, 0, 0.55);
+    --light-black-11: rgba(0, 0, 0, 0.6);
+    --light-black-12: rgba(0, 0, 0, 0.65);
+    --light-black-13: rgba(0, 0, 0, 0.7);
+    --light-black-14: rgba(0, 0, 0, 0.75);
+    --light-black-15: rgba(0, 0, 0, 0.8);
+    --light-black-16: rgba(0, 0, 0, 0.85);
+    --light-black-17: rgba(0, 0, 0, 0.9);
+    --light-black-18: rgba(0, 0, 0, 0.95);
+    --default-transition: all 0.2s ease-in;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-ubuntu);
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--white-color);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--grey-4-color);
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    cursor: pointer;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--black-color);
+}
+
+/* Normal Headings */
+.h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.h3 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.h4 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.h5 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.h6 {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+/* Title */
+.title {
+    border-bottom: 2px solid var(--grey-4-color);
+}
+
+/* Icon */
+.icon {
+    font-size: 1.25rem;
+}
+
+/* Buttons */
+.btn {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.animated-btn {
+    padding: 1rem 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background:
+    linear-gradient(currentColor 0 0) 0 100%,
+    linear-gradient(currentColor 0 0) 0 100%,
+    linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 100% 0;
+    background-size: 20px 3px, 3px 20px;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+
+.animated-btn:hover {
+    background-position: 100% 100%, 0 0, 0 0, 100% 100%;
+}
+
+/* Small Text */
+.small {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.x-small {
+    font-size: 0.725rem;
+    font-weight: 600;
+}
+
+/* Badge */
+.badge {
+    position: absolute;
+    top: -0.75rem;
+    right: -0.75rem;
+    min-width: 1.5rem;
+    max-width: fit-content;
+    height: 1.5rem;
+    background: var(--badge-color);
+    color: var(--light-color);
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+}
+
+/* Horizontal Line */
+.hr {
+    width: 100%;
+    border: none;
+    border-top: 2px solid var(--grey-7-color);
+}
+
+/* Flex */
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row-wrap {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+/* Slider */
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 0.375rem;
+    border-radius: 1rem;
+    background: var(--grey-3-color);
+    outline: none;
+    opacity: 0.9;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    background: var(--white-color);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.875rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--grey-7-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--grey-1-color);
 }

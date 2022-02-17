@@ -1,7 +1,8 @@
 {
-  "name": "cce",
+  "name": "collaborative-code-editor",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@monaco-editor/react": "^4.3.1",
     "@testing-library/jest-dom": "^5.16.2",
@@ -12,7 +13,9 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-monaco-editor": "^0.47.0",
+    "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "socket.io-client": "^4.4.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
