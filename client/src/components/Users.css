@@ -1,0 +1,46 @@
+.user-container {
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 4.5rem;
+    width: 40rem;
+    background: var(--white-color);
+    transition: var(--default-transition);
+    border-radius: 10px;
+}
+
+.user-container > .h3 {
+    width: 100%;
+    border-bottom: 1px solid var(--light-black-2);
+    text-align: center;
+    padding: 0.25rem 0;
+    background: var(--grey-1-color);
+    color: var(--white-color);
+    font-family: var(--font-poiret-one);
+}
+
+.users {
+    flex: 1;
+    overflow-y: auto;
+    width: 100%;
+    padding: 1rem;
+    align-content: flex-start;
+}
+
+.users .user {
+    margin-bottom: 0.5rem;
+	padding: 0.5rem;
+    gap: 2rem;
+}
+
+.users .user .h5 {
+    margin-bottom: 0;
+}
+
+.avatar-md {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--grey-4-color);
+    color: var(--white-color);
+}

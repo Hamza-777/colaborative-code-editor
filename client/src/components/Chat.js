@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
+import './Chat.css';
 
-function Chat({ socket }) {
+function Chat({ socket, chatScale }) {
     let { roomname, username } = useParams();
     const [text, setText] = useState("");
     const [messages, setMessages] = useState([]);
@@ -33,46 +34,43 @@ function Chat({ socket }) {
     useEffect(scrollToBottom, [messages]);
 
     return (
-        <div className="chat">
-            <div className="user-name">
-                <h2>
-                {username} <span style={{ fontSize: "0.7rem" }}>in {roomname}</span>
-                </h2>
+        <div className="chat flex-center flex-col" style={{ transform: `scaleY(${chatScale})`}}>
+            <p className="h3">Chat Room</p>
+            <div className="chat-message flex flex-col">
+                <div className="messages">
+                    {messages.map((i) => {
+                        if (i.username === username) {
+                            return (
+                                <div className="message flex-center flex-col align-start msg-right">
+                                    <p className="meta">{i.username} {`(${roomname})`} <span>{i.time}</span></p>
+                                    <p className="text">{i.text}</p>
+                                </div>
+                            );
+                        } else {
+                            return (
+                                <div className="message flex-center flex-col align-start msg-left">
+                                    <p className="meta">{i.username} {`(${roomname})`} <span>{i.time}</span></p>
+                                    <p className="text">{i.text}</p>
+                                </div>
+                            );
+                        }
+                    })}
+                    <div ref={messagesEndRef} />
+                </div>
             </div>
-            <div className="chat-message">
-                {messages.map((i) => {
-                if (i.username === username) {
-                    return (
-                    <div className="message">
-                        <p>{i.text}</p>
-                        <span>{i.username}</span>
-                        <span>{i.time}</span>
-                    </div>
-                    );
-                } else {
-                    return (
-                    <div className="message mess-right">
-                        <p>{i.text} </p>
-                        <span>{i.username}</span>
-                        <span>{i.time}</span>
-                    </div>
-                    );
-                }
-                })}
-                <div ref={messagesEndRef} />
-            </div>
-            <div className="send">
+            <div className="send flex-center">
                 <input
-                placeholder="enter your message"
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-                onKeyPress={(e) => {
-                    if (e.key === "Enter") {
-                        sendData();
-                    }
-                }}
+                    type='text'
+                    placeholder="Type something..."
+                    value={text}
+                    onChange={(e) => setText(e.target.value)}
+                    onKeyPress={(e) => {
+                        if (e.key === "Enter") {
+                            sendData();
+                        }
+                    }}
                 ></input>
-                <button onClick={sendData}>Send</button>
+                <button className="btn" onClick={sendData}>Send <i class="fa-solid fa-paper-plane"></i></button>
             </div>
         </div>
     );

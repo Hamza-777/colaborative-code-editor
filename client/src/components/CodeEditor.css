@@ -1,0 +1,132 @@
+.editor-fragment {
+    height: 100vh;
+    background: var(--dark-color);
+}
+
+.header {
+    background: var(--dark-color);
+}
+
+.navbar {
+    height: 5rem;
+    padding: 2rem 3rem;
+    gap: 3rem;
+    color: var(--light-color);
+}
+
+.run {
+    padding: 0.5rem 3rem;
+    color: var(--light-color);
+    gap: 0.5rem;
+}
+
+select {
+    width: 10rem;
+    padding: 0.2rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: var(--grey-7-color);
+}
+
+.options {
+    position: relative;
+    gap: 1rem;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 3rem;
+    background: var(--grey-1-color);
+    pointer-events: none;
+}
+
+.custom-arrow::before,
+.custom-arrow::after {
+    --size: 0.5rem;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-arrow::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) solid rgba(255, 255, 255, 0.7);
+    top: 30%;
+}
+
+.custom-arrow::after {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid rgba(255, 255, 255, 0.7);
+    top: 70%;
+}
+
+.h6 {
+    margin-bottom: 0;
+}
+
+.logo {
+    width: 15rem;
+    height: 4rem;
+    margin-left: auto;
+}
+
+.logo > img {
+    width: 100%;
+    object-fit: contain;
+}
+
+main {
+    height: calc(100vh - 9rem);
+}
+
+.output-container {
+    width: 100%;
+    height: 11rem;
+    background: var(--dark-color);
+    color: var(--light-color);
+}
+
+.output-container > .h4 {
+    padding: 0.2rem 3rem;
+    background: var(--grey-1-color);
+    border-bottom: 1px solid var(--light-color);
+}
+
+.output {
+    padding: 0.2rem 3rem;
+}
+
+.footer {
+    height: 4rem;
+    padding: 1rem 3rem;
+    background: var(--dark-color);
+    color: var(--light-color);
+    border-top: 1px solid var(--light-color);
+}
+
+.footer > div {
+    margin-left: auto;
+    gap: 3rem;
+}
+
+.footer > div > i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--default-transition);
+}
+
+.footer > div > i:hover {
+    transform: scale(1.1);
+}

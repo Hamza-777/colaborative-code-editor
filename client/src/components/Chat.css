@@ -1,0 +1,103 @@
+.chat {
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 4.5rem;
+    width: 40rem;
+    background: var(--white-color);
+    transition: var(--default-transition);
+    border-radius: 10px;
+}
+
+.chat > .h3 {
+    width: 100%;
+    border-bottom: 1px solid var(--light-black-2);
+    text-align: center;
+    padding: 0.25rem 0;
+    background: var(--grey-1-color);
+    color: var(--white-color);
+    font-family: var(--font-poiret-one);
+}
+
+.chat-message {
+    flex: 0.95;
+    overflow-y: auto;
+    width: 100%;
+    padding: 1rem;
+    align-content: flex-start;
+}
+
+.chat-message .message {
+    min-width: 15rem;
+    max-width: 25rem;
+    margin-bottom: 1rem;
+	padding: 0.5rem;
+	background-color: var(--light-color);
+    border: 2px solid var(--light-black-2);
+}
+
+.chat-message .msg-right {
+	border-radius: 5px 0 5px 5px;
+    margin-left: auto;
+}
+
+.chat-message .msg-left {
+	border-radius: 0 5px 5px 5px;
+    margin-right: auto;
+}
+
+.chat-message .message .meta {
+    width: 100%;
+	font-size: 1rem;
+	font-weight: bold;
+	color: var(--dark-color);
+	opacity: 0.7;
+	margin-bottom: 7px;
+}
+
+.chat-message .message .meta span {
+    float: right;
+	color: #000;
+}
+
+.chat-message .message .text {
+    width: 100%;
+    text-align: left;
+    word-wrap: break-word;
+    text-overflow: wrap;
+}
+
+.send {
+    flex: 0.05;
+    width: 100%;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    border-top: 1px solid var(--light-black-2);
+    background: var(--grey-1-color);
+}
+
+.send > input {
+    background: transparent;
+    flex: 1;
+    border: 1px solid var(--light-black-2);
+    transition: var(--default-transition);
+    color: var(--white-color);
+}
+
+.send > input:hover,
+.send > input:focus {
+    border: 1px solid var(--light-color);
+    border-radius: 5px;
+}
+
+.send > .btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--light-color);
+    color: var(--white-color);
+    border-radius: 5px;
+    transition: var(--default-transition);
+}
+
+.send > .btn:hover {
+    transform: scale(1.1);
+}

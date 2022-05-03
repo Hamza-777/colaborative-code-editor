@@ -19,7 +19,7 @@
     --font-ubuntu: 'Ubuntu', sans-serif;
     --primary-color: #00E0FF;
     --secondary-color: #393E46;
-    --dark-color: #040303;
+    --dark-color: #1E1E1E;
     --light-color: #EEEEEE;
     --badge-color: #FF5722;
     --starred-color: #FFC900;
@@ -59,7 +59,7 @@
     --light-black-16: rgba(0, 0, 0, 0.85);
     --light-black-17: rgba(0, 0, 0, 0.9);
     --light-black-18: rgba(0, 0, 0, 0.95);
-    --default-transition: all 0.2s ease-in;
+    --default-transition: all 0.25s ease-in;
 }
 
 * {
@@ -213,7 +213,7 @@ input[type='password'] {
 .hr {
     width: 100%;
     border: none;
-    border-top: 2px solid var(--grey-7-color);
+    border-top: 2px solid var(--grey-3-color);
 }
 
 /* Flex */
@@ -320,7 +320,7 @@ input[type='password'] {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 0.875rem;
+    width: 0.5rem;
 }
 
 /* Track */
